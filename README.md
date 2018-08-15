@@ -1,6 +1,15 @@
-# Introduction
+# Sequential prediction tasks for Adaptive Skip Intervals
 This repository includes visual prediction tasks for the paper
 [Adaptive Skip Intervals: Temporal Abstraction for Recurrent Dynamical Models](https://arxiv.org/abs/1808.04768)
+
+```
+@article{neitz2018adaptive,
+  title={Adaptive Skip Intervals: Temporal Abstraction for Recurrent Dynamical Models},
+  author={Neitz, Alexander and Parascandolo, Giambattista and Bauer, Stefan and Sch{\"o}lkopf, Bernhard},
+  journal={arXiv preprint arXiv:1808.04768},
+  year={2018}
+}
+```
 
 See repository [adaptive-skip-intervals](https://github.com/neitzal/adaptive-skip-intervals) for an implementation of the ASI algorithm.
 
@@ -12,10 +21,10 @@ Currently implemented tasks are:
 
 - **Room runner**:  
     ![Room runner animation](img/rr_demo.gif)  
-    Task: Given the first frame of the trajectory, predict color of the room the green dot will end up at.
+    Task: Given the first frame of the trajectory, predict color of the room in which the green dot will end up.
 
 
-# Dependencies
+## Dependencies
 
 - box2d==2.3.2
 - cairocffi==0.8.0
@@ -29,7 +38,7 @@ Currently implemented tasks are:
 
 
 
-# Generate datasets
+## Generate datasets
 
 Room runner:  
 `python -m generate.generate_dataset --dataset rr --seed 1234 --n_trajectories 500 --output_dir /path/to/dataset/directory/`
